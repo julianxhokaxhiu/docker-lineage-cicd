@@ -1,4 +1,4 @@
-FROM finalduty/archlinux
+FROM base/archlinux
 MAINTAINER Julian Xhokaxhiu <info at julianxhokaxhiu dot com>
 
 # Environment variables
