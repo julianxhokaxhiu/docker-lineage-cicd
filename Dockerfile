@@ -24,6 +24,10 @@ ENV BRANCH_NAME 'cm-14.1'
 # eg. DEVICE_LIST=hammerhead,bullhead,angler
 ENV DEVICE_LIST ''
 
+# OTA build.prop key that will be used inside CMUpdater
+# Use this in combination with LineageOTA to make sure your device can auto-update itself from this buildbot
+ENV OTA_PROP 'cm.updater.uri'
+
 # OTA URL that will be used inside CMUpdater
 # Use this in combination with LineageOTA to make sure your device can auto-update itself from this buildbot
 ENV OTA_URL ''

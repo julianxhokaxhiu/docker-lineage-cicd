@@ -52,7 +52,7 @@ if ! [ -z "$DEVICE_LIST" ]; then
   # Set a custom updater URI if a OTA URL is provided
   if ! [ -z "$OTA_URL" ]; then
     echo ">> [$(date)] Adding OTA URL '$OTA_URL' to build.prop" >> $DOCKER_LOG
-    sed -i "1s;^;PRODUCT_PROPERTY_OVERRIDES += cm.updater.uri=$OTA_URL\n\n;" vendor/cm/config/common.mk >&$DEBUG_LOG
+    sed -i "1s;^;PRODUCT_PROPERTY_OVERRIDES += $OTA_PROP=$OTA_URL\n\n;" vendor/cm/config/common.mk >&$DEBUG_LOG
   fi
 
   # Cycle DEVICE_LIST environment variable, to know which one may be executed next
