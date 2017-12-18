@@ -18,7 +18,12 @@ Because I'm a big fan of isolating everything if possible. I don't want to reins
 
 ### Android propretary binaries
 
-By default when you build Android from scratch you need to pull the Binaries of your interested device via ADB. Although via this Docker is not possible to do so ( would imply having all the devices connected to that machine and ideally know how to switch from one to the other before pulling ). Therefore, I highly suggest to download this manifest ( https://github.com/TheMuppets/manifests ) inside your mapped `/srv/local_manifests` folder.
+By default when you build Android from scratch you need to pull the Binaries of your interested device via ADB. Although via this Docker is not possible to do so ( would imply having all the devices connected to that machine and ideally know how to switch from one to the other before pulling ).
+
+In order to enable the CICD pipeline to work, I highly suggest to make use of this manifest (https://github.com/TheMuppets/manifests) and save it inside your mapped `/srv/local_manifests` folder, by doing for example:
+```shell
+$ curl -o https://raw.githubusercontent.com/TheMuppets/manifests/cm-14.1/muppets.xml /srv/local_manifests/muppets.xml
+```
 
 ## How it works
 
