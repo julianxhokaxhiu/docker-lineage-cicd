@@ -133,7 +133,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-utils \
     lzop \
     maven \
-    openjdk-8-jdk \
+    openjdk-8-jdk-headless \
     openssl \
     pngcrush \
     procps \
