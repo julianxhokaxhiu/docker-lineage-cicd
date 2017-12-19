@@ -127,7 +127,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 \
     libxml2-utils \
     lzop \
+    openssl \
     pngcrush \
+    procps \
+    python \
+    repo \
     rsync \
     schedtool \
     squashfs-tools \
