@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM openjdk:8-slim
 MAINTAINER Julian Xhokaxhiu <info at julianxhokaxhiu dot com>
 
 # Environment variables
@@ -133,7 +133,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-utils \
     lzop \
     maven \
-    openjdk-8-jdk-headless \
     openssl \
     pngcrush \
     procps \
