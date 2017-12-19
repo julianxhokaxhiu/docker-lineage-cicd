@@ -24,6 +24,7 @@ if ! [ -z "$DEVICE_LIST" ]; then
 
   # Copy local manifests to the appropriate folder in order take them into consideration
   echo ">> [$(date)] Copying '$LMANIFEST_DIR/*.xml' to '$SRC_DIR/.repo/local_manifests/'" >> $DOCKER_LOG
+  mkdir -p $SRC_DIR/.repo/local_manifests
   cp $LMANIFEST_DIR/*.xml $SRC_DIR/.repo/local_manifests/ >&$DEBUG_LOG
 
   # Go to "vendor/cm" and reset it's current git status ( remove previous changes ) only if the directory exists
