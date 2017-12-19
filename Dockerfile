@@ -132,6 +132,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 \
     libxml2-utils \
     lzop \
+    openjdk-8-jdk \
     openssl \
     pngcrush \
     procps \
