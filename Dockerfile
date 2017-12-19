@@ -132,6 +132,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2 \
     libxml2-utils \
     lzop \
+    maven \
     openjdk-8-jdk \
     openssl \
     pngcrush \
@@ -142,6 +143,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     schedtool \
     squashfs-tools \
     unzip \
+    wget \
     xsltproc \
     zip \
     zlib1g-dev
