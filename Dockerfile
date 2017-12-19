@@ -105,6 +105,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     bc \
     bison \
     build-essential \
+    ccache \
     cron \
     curl \
     flex \
