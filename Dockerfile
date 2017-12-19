@@ -4,6 +4,7 @@ MAINTAINER Julian Xhokaxhiu <info at julianxhokaxhiu dot com>
 # Environment variables
 #######################
 
+ENV USER root
 ENV SRC_DIR /srv/src
 ENV CCACHE_DIR /srv/ccache
 ENV ZIP_DIR /srv/zips
