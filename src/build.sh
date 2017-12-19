@@ -15,12 +15,9 @@ if ! [ -z "$DEVICE_LIST" ]; then
   # cd to working directory
   cd $SRC_DIR
 
-  # If the source directory is empty
-  if ! [ "$(ls -A $SRC_DIR)" ]; then
-    # Initialize repository
-    echo ">> [$(date)] Initializing repository" >> $DOCKER_LOG
-    yes | repo init -u git://github.com/lineageos/android.git -b $BRANCH_NAME 2>&1 >&$DEBUG_LOG
-  fi
+  # Initialize repository
+  echo ">> [$(date)] Initializing repository" >> $DOCKER_LOG
+  yes | repo init -u git://github.com/lineageos/android.git -b $BRANCH_NAME 2>&1 >&$DEBUG_LOG
 
   # Copy local manifests to the appropriate folder in order take them into consideration
   echo ">> [$(date)] Copying '$LMANIFEST_DIR/*.xml' to '$SRC_DIR/.repo/local_manifests/'" >> $DOCKER_LOG
