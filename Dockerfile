@@ -140,6 +140,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rsync \
     schedtool \
     squashfs-tools \
+    unzip \
     xsltproc \
     zip \
     zlib1g-dev
