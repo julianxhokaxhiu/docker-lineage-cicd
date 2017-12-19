@@ -106,7 +106,7 @@ RUN sed -i "s/ main$/ main contrib/" /etc/apt/sources.list
 # Install required Android AOSP packages
 ########################################
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     bc \
     bison \
     build-essential \
