@@ -36,7 +36,7 @@ if ! [ -z "$DEVICE_LIST" ]; then
 
   # Sync the source code
   echo ">> [$(date)] Syncing repository" >> $DOCKER_LOG
-  repo sync 2>&1 >&$DEBUG_LOG
+  repo sync -f 2>&1 >&$DEBUG_LOG
 
   # If requested, clean the OUT dir in order to avoid clutter
   if [ "$CLEAN_OUTDIR" = true ]; then
