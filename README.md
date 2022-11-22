@@ -4,7 +4,7 @@ Docker microservice for LineageOS Continuous Integration and Continous Deploymen
 
 ## Why
 
-Because I always believe that even advanced technologies should be available to everyone. This is a tentative to offer everyone the possibility to build his own images of LineageOS, when he wants, how he wants. You don't have to wait anymore for build bots. No more scene drama. Just build and enjoy your favourite Android ROM.
+Because I always believe that even advanced technologies should be available to everyone. This is a tentative to offer everyone the possibility to build its own images of LineageOS, when it wants, how it wants. You don't have to wait anymore for build bots. No more scene drama. Just build and enjoy your favourite Android ROM.
 
 ## Why Docker?
 
@@ -18,7 +18,7 @@ Because I'm a big fan of isolating everything if possible. I don't want to reins
 
 ### Android propretary binaries
 
-By default when you build Android from scratch you need to pull the Binaries of your interested device via ADB. Although via this Docker is not possible to do so ( would imply having all the devices connected to that machine and ideally know how to switch from one to the other before pulling ).
+By default when you build Android from scratch you need to pull the Binaries of your interested device via ADB. Although via Docker this is not possible to do so ( would imply having all the devices connected to that machine and ideally know how to switch from one to the other before pulling ).
 
 In order to enable the CICD pipeline to work, I highly suggest to make use of this manifest (https://github.com/TheMuppets/manifests) and save it inside your mapped `/srv/local_manifests` folder, by doing for example:
 ```shell
@@ -29,7 +29,7 @@ $ curl -o https://raw.githubusercontent.com/TheMuppets/manifests/cm-14.1/muppets
 
 This docker will autobuild any device list given for a specified branch every midnight at 02:00 UTC. In the end, any built ZIP will be moved to the relative volume mapped directory to `/srv/zips`.
 
-> **IMPORTANT:** Remember to use VOLUME mapping. By default Docker creates container with max 10GB of Space. If you will not map volumes, the docker will just break during Source syncronization!
+> **IMPORTANT:** Remember to use VOLUME mapping. By default Docker creates containers with max 10GB of Space. If you will not map volumes, the container will just break during Source syncronization!
 
 ## Configuration
 
